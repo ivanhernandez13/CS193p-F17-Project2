@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CCF10B82003200A003A43D3 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF10B72003200A003A43D3 /* SetGame.swift */; };
+		2CDC5FB820017F6900C0252F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC5FB720017F6900C0252F /* Deck.swift */; };
 		2CF1817D2001752600C52917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1817C2001752600C52917 /* AppDelegate.swift */; };
 		2CF1817F2001752600C52917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1817E2001752600C52917 /* ViewController.swift */; };
 		2CF181822001752600C52917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF181802001752600C52917 /* Main.storyboard */; };
 		2CF181842001752600C52917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF181832001752600C52917 /* Assets.xcassets */; };
 		2CF181872001752600C52917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF181852001752600C52917 /* LaunchScreen.storyboard */; };
+		2CF181902001796600C52917 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1818F2001796600C52917 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CCF10B72003200A003A43D3 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		2CDC5FB720017F6900C0252F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		2CF181792001752600C52917 /* SetGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF1817C2001752600C52917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CF1817E2001752600C52917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		2CF181832001752600C52917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CF181862001752600C52917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CF181882001752600C52917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF1818F2001796600C52917 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		2CF1817B2001752600C52917 /* SetGame */ = {
 			isa = PBXGroup;
 			children = (
-				2CF1817C2001752600C52917 /* AppDelegate.swift */,
+				2CF1818E2001753E00C52917 /* Supporting Files */,
 				2CF1817E2001752600C52917 /* ViewController.swift */,
+				2CF1818F2001796600C52917 /* Card.swift */,
+				2CDC5FB720017F6900C0252F /* Deck.swift */,
+				2CCF10B72003200A003A43D3 /* SetGame.swift */,
 				2CF181802001752600C52917 /* Main.storyboard */,
-				2CF181832001752600C52917 /* Assets.xcassets */,
-				2CF181852001752600C52917 /* LaunchScreen.storyboard */,
 				2CF181882001752600C52917 /* Info.plist */,
 			);
 			path = SetGame;
+			sourceTree = "<group>";
+		};
+		2CF1818E2001753E00C52917 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CF181832001752600C52917 /* Assets.xcassets */,
+				2CF181852001752600C52917 /* LaunchScreen.storyboard */,
+				2CF1817C2001752600C52917 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +91,7 @@
 				2CF181752001752600C52917 /* Sources */,
 				2CF181762001752600C52917 /* Frameworks */,
 				2CF181772001752600C52917 /* Resources */,
+				84EE969F20058C1B0017AB91 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,12 +149,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84EE969F20058C1B0017AB91 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CF181752001752600C52917 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDC5FB820017F6900C0252F /* Deck.swift in Sources */,
 				2CF1817F2001752600C52917 /* ViewController.swift in Sources */,
+				2CCF10B82003200A003A43D3 /* SetGame.swift in Sources */,
+				2CF181902001796600C52917 /* Card.swift in Sources */,
 				2CF1817D2001752600C52917 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
